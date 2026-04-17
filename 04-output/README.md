@@ -91,6 +91,11 @@ That second layer is the job of [`../05-enforcement/`](../05-enforcement/).
 
 ## Further reading
 
+**Structured output and tool-use**
+- [JSON Schema](https://json-schema.org/) — the schema vocabulary used by `schema.py` and Bedrock's tool inputs
+- [Amazon Bedrock user guide](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html) — Converse API and tool-use reference material used by `generate_pr_description.py`
+
+**Practitioner perspectives (outcomeops.ai)**
 - [The outcome is writing itself](https://www.outcomeops.ai/blogs/the-outcome-is-writing-itself)
 - [The OutcomeOps way: stop prompting, start co-engineering](https://www.outcomeops.ai/blogs/the-outcomeops-way-stop-prompting-start-co-engineering)
 - [What AI-assisted development actually looks like in two years](https://www.outcomeops.ai/blogs/what-ai-assisted-development-actually-looks-like-in-two-years)

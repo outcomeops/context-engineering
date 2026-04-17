@@ -66,6 +66,12 @@ If your organization has no ADRs, `generate_adr_from_diff.py` is where to start.
 
 ## Further reading
 
+**ADRs as a format**
+- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — Michael Nygard, the original essay that defined the format used here
+- [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) — comprehensive list of ADR templates, tools, and write-ups
+- [ADR on the ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records) — why ADRs landed in Adopt
+
+**Practitioner perspectives (outcomeops.ai)**
 - [What is an ADR and why they're critical for AI-powered development](https://www.outcomeops.ai/blogs/what-is-an-adr-and-why-theyre-critical-for-ai-powered-development)
 - [AI-generated ADRs: from zero documentation to queryable architecture](https://www.outcomeops.ai/blogs/ai-generated-adrs-from-zero-documentation-to-queryable-architecture)
 - [How 3 ADRs changed everything: Spring PetClinic proof](https://www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof)

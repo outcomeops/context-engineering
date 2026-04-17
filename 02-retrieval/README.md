@@ -73,6 +73,12 @@ This is the point [_The real cost of knowledge_](https://www.outcomeops.ai/blogs
 
 ## Further reading
 
+**Retrieval and embeddings**
+- [facebookresearch/faiss](https://github.com/facebookresearch/faiss) — the index used here; the README and wiki cover index types beyond `IndexFlatIP`
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023; the empirical basis for why position of retrieved context matters
+- [Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents/) — LangChain on the write/select/compress/isolate strategies applied during retrieval
+
+**Practitioner perspectives (outcomeops.ai)**
 - [The real cost of knowledge: why most AI engineering platforms over-engineer RAG](https://www.outcomeops.ai/blogs/the-real-cost-of-knowledge-why-most-ai-engineering-platforms-over-engineer-rag)
 - [OutcomeOps: self-documenting architecture — when code becomes queryable](https://www.outcomeops.ai/blogs/outcomeops-self-documenting-architecture-when-code-becomes-queryable)
 - [Same context, three models — the floor isn't zero](https://www.outcomeops.ai/blogs/same-context-three-models-the-floor-isnt-zero)

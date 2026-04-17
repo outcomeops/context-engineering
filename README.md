@@ -64,9 +64,29 @@ This repo exists to show the pattern in code, end-to-end, so teams can build it 
 
 ---
 
-## Further reading on outcomeops.ai
+## Further reading
 
-Grouped by component:
+### From the broader community
+
+Foundational and high-signal sources on context engineering as a discipline:
+
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic engineering, on curating and limiting what an agent sees
+- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) — LangChain, the article that gave the term widespread uptake
+- [Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents/) — LangChain, the write/select/compress/isolate framing
+- [Context Engineering: Bringing Engineering Discipline to Prompts](https://addyo.substack.com/p/context-engineering-bringing-engineering) — Addy Osmani
+- [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide) — PromptingGuide.ai reference
+- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — Michael Nygard's original ADR essay (the format used throughout this repo)
+
+### Companion repositories
+
+- [bonigarcia/context-engineering](https://github.com/bonigarcia/context-engineering) — book companion from Boni García; organized by chapter with polyglot examples
+- [davidkimai/Context-Engineering](https://github.com/davidkimai/Context-Engineering) — concepts, patterns, and techniques
+- [Meirtz/Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering) — curated list of papers, tools, and articles
+- [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) — the definitive ADR resource list
+
+### From outcomeops.ai
+
+
 
 **Corpus**
 - [What is an ADR and why they're critical for AI-powered development](https://www.outcomeops.ai/blogs/what-is-an-adr-and-why-theyre-critical-for-ai-powered-development)

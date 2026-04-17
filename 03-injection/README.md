@@ -69,6 +69,12 @@ Both are worth adding once your corpus and query patterns stabilize. Premature o
 
 ## Further reading
 
+**Prompt construction and context window behavior**
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic engineering, on curating what reaches the model
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023; the paper behind the "put the question last" advice
+- [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide) — PromptingGuide.ai reference on structuring model input
+
+**Practitioner perspectives (outcomeops.ai)**
 - [How I refactored a 1348-line Lambda using context engineering](https://www.outcomeops.ai/blogs/how-i-refactored-a-1348-line-lambda-using-context-engineering)
 - [Same context, three models — the floor isn't zero](https://www.outcomeops.ai/blogs/same-context-three-models-the-floor-isnt-zero)
 - [6.6M tokens, $4,800, zero visibility — so I built a dashboard](https://www.outcomeops.ai/blogs/6-6m-tokens-4800-zero-visibility-so-i-built-a-dashboard)

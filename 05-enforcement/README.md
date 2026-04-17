@@ -81,6 +81,11 @@ Layer 1 is documentation. Layers 2 and 3 are enforcement.
 
 ## Further reading
 
+**LLM-as-judge and evaluation**
+- [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685) — Zheng et al., 2023; the foundational paper on using LLMs as evaluators and the biases to watch for
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic's take on curating what agents see (applies equally to judges)
+
+**Practitioner perspectives (outcomeops.ai)**
 - [Your pull request is the guardrail](https://www.outcomeops.ai/blogs/your-pull-request-is-the-guardrail)
 - [Engineers who own the outcome](https://www.outcomeops.ai/blogs/engineers-who-own-the-outcome)
 - [From fixing code to teaching systems](https://www.outcomeops.ai/blogs/from-fixing-code-to-teaching-systems)

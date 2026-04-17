@@ -63,6 +63,13 @@ The "without" answer is generically correct at best and confidently wrong at wor
 
 ## Further reading
 
+**Category positioning and adjacent work**
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic's framing of the discipline
+- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) — LangChain, on why the term emerged
+- [bonigarcia/context-engineering](https://github.com/bonigarcia/context-engineering) — book companion repo organized by chapter with polyglot examples
+- [Meirtz/Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering) — curated list of papers, tools, and articles
+
+**Practitioner perspectives (outcomeops.ai)**
 - [Context engineering vs Nova Forge](https://www.outcomeops.ai/blogs/context-engineering-vs-nova-forge)
 - [Anthropic says: build skills, not agents](https://www.outcomeops.ai/blogs/anthropic-says-build-skills-not-agents)
 - [You're probably using the wrong Bedrock model](https://www.outcomeops.ai/blogs/youre-probably-using-the-wrong-bedrock-model)
