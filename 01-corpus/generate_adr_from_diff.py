@@ -11,6 +11,7 @@ See: https://www.outcomeops.ai/blogs/ai-generated-adrs-from-zero-documentation-t
 from __future__ import annotations
 
 import argparse
+import datetime as _dt
 import os
 import sys
 from pathlib import Path
@@ -56,7 +57,8 @@ Rules:
 
 def build_user_message(diff: str, title: str | None) -> str:
     title_hint = f"\nProposed title: {title}\n" if title else ""
-    return f"""Produce an ADR for the following git diff.{title_hint}
+    today = _dt.date.today().isoformat()
+    return f"""Produce an ADR for the following git diff. Use {today} as the Date.{title_hint}
 
 <diff>
 {diff}

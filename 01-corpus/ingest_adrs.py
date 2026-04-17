@@ -51,7 +51,7 @@ def parse_adr(path: Path) -> dict:
         "title": title,
         "status": status.strip() if isinstance(status, str) else status,
         "date": date.strip() if isinstance(date, str) else date,
-        "path": str(path),
+        "path": str(path.resolve()),
         "sections": extract_sections(raw),
         "raw": raw,
     }
