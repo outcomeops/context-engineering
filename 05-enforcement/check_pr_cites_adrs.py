@@ -32,6 +32,18 @@ import sys
 from pathlib import Path
 
 import boto3
+from botocore.exceptions import ClientError
+
+BEDROCK_FTU_HINT = (
+    "\nBedrock AccessDeniedException. Two common causes:\n"
+    "  1. First-time Anthropic Claude use in this AWS account — submit the one-time\n"
+    "     First Time Use form from the Bedrock model catalog:\n"
+    "       https://console.aws.amazon.com/bedrock/home#/model-catalog\n"
+    "     Access is granted immediately after submission.\n"
+    "  2. IAM policy missing bedrock:InvokeModel for the model in question.\n"
+    "See the repo README for details.\n"
+)
+
 
 DEFAULT_MODEL_ID = os.environ.get(
     "BEDROCK_MODEL_ID", "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -109,13 +121,19 @@ def judge_one(client, diff: str, pr_citation: dict, adr: dict, model_id: str) ->
         f"<diff>\n{diff}\n</diff>\n\n"
         f"Return a verdict."
     )
-    response = client.converse(
-        modelId=model_id,
-        system=[{"text": JUDGE_SYSTEM_PROMPT}],
-        messages=[{"role": "user", "content": [{"text": user}]}],
-        toolConfig={"tools": [VERDICT_TOOL], "toolChoice": {"tool": {"name": "submit_verdict"}}},
-        inferenceConfig={"maxTokens": 512, "temperature": 0.0},
-    )
+    try:
+        response = client.converse(
+            modelId=model_id,
+            system=[{"text": JUDGE_SYSTEM_PROMPT}],
+            messages=[{"role": "user", "content": [{"text": user}]}],
+            toolConfig={"tools": [VERDICT_TOOL], "toolChoice": {"tool": {"name": "submit_verdict"}}},
+            inferenceConfig={"maxTokens": 512, "temperature": 0.0},
+        )
+    except ClientError as e:
+        if e.response.get("Error", {}).get("Code") == "AccessDeniedException":
+            print(BEDROCK_FTU_HINT, file=sys.stderr)
+            sys.exit(1)
+        raise
     for block in response["output"]["message"]["content"]:
         if "toolUse" in block:
             return block["toolUse"]["input"]

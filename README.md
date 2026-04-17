@@ -31,10 +31,20 @@ A system with only components 1–3 is a RAG system. The output and enforcement 
 All examples use **Amazon Bedrock** with Claude. Each folder has its own `requirements.txt` and `README.md` with a runnable command.
 
 **Prerequisites:**
-- AWS account with Bedrock access in a region where Claude is available (e.g. `us-east-1`)
-- Claude model access enabled via the Bedrock console
+
 - Python 3.11+
-- AWS credentials configured (`aws configure` or env vars)
+- AWS account with credentials configured (`aws configure` or env vars)
+- AWS region that supports Claude and Titan (e.g. `us-east-1`, `us-west-2`)
+
+This repo uses Anthropic Claude for generation and Amazon Titan for embeddings. Titan and most Bedrock foundation models are **auto-enabled** on first invocation — no action needed.
+
+**Anthropic Claude requires a one-time First Time Use (FTU) form per AWS account.** If your account has never used Anthropic models on Bedrock, the first script run will fail with `AccessDeniedException`. To fix:
+
+1. Open any Anthropic Claude model in the [Bedrock model catalog](https://console.aws.amazon.com/bedrock/home#/model-catalog)
+2. Fill the First Time Use form (company, use case — about a minute)
+3. Submit — access is granted immediately, no review queue
+
+If you're in an AWS Organization child account, the form must be submitted from the management account to inherit access.
 
 **Quickstart:**
 

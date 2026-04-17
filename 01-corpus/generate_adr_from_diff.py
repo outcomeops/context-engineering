@@ -17,6 +17,18 @@ import sys
 from pathlib import Path
 
 import boto3
+from botocore.exceptions import ClientError
+
+BEDROCK_FTU_HINT = (
+    "\nBedrock AccessDeniedException. Two common causes:\n"
+    "  1. First-time Anthropic Claude use in this AWS account — submit the one-time\n"
+    "     First Time Use form from the Bedrock model catalog:\n"
+    "       https://console.aws.amazon.com/bedrock/home#/model-catalog\n"
+    "     Access is granted immediately after submission.\n"
+    "  2. IAM policy missing bedrock:InvokeModel for the model in question.\n"
+    "See the repo README for details.\n"
+)
+
 
 DEFAULT_MODEL_ID = os.environ.get(
     "BEDROCK_MODEL_ID", "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -68,12 +80,18 @@ def build_user_message(diff: str, title: str | None) -> str:
 
 def generate_adr(diff: str, title: str | None, model_id: str, region: str) -> str:
     client = boto3.client("bedrock-runtime", region_name=region)
-    response = client.converse(
-        modelId=model_id,
-        system=[{"text": SYSTEM_PROMPT}],
-        messages=[{"role": "user", "content": [{"text": build_user_message(diff, title)}]}],
-        inferenceConfig={"maxTokens": 2048, "temperature": 0.2},
-    )
+    try:
+        response = client.converse(
+            modelId=model_id,
+            system=[{"text": SYSTEM_PROMPT}],
+            messages=[{"role": "user", "content": [{"text": build_user_message(diff, title)}]}],
+            inferenceConfig={"maxTokens": 2048, "temperature": 0.2},
+        )
+    except ClientError as e:
+        if e.response.get("Error", {}).get("Code") == "AccessDeniedException":
+            print(BEDROCK_FTU_HINT, file=sys.stderr)
+            sys.exit(1)
+        raise
     return response["output"]["message"]["content"][0]["text"]
 
 

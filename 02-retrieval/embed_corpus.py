@@ -23,6 +23,18 @@ from pathlib import Path
 import boto3
 import faiss
 import numpy as np
+from botocore.exceptions import ClientError
+
+BEDROCK_FTU_HINT = (
+    "\nBedrock AccessDeniedException. Two common causes:\n"
+    "  1. First-time Anthropic Claude use in this AWS account — submit the one-time\n"
+    "     First Time Use form from the Bedrock model catalog:\n"
+    "       https://console.aws.amazon.com/bedrock/home#/model-catalog\n"
+    "     Access is granted immediately after submission.\n"
+    "  2. IAM policy missing bedrock:InvokeModel for the model in question.\n"
+    "See the repo README for details.\n"
+)
+
 
 DEFAULT_EMBED_MODEL = os.environ.get("BEDROCK_EMBED_MODEL_ID", "amazon.titan-embed-text-v2:0")
 DEFAULT_REGION = os.environ.get("AWS_REGION", "us-east-1")
@@ -30,10 +42,16 @@ EMBED_DIM = 1024
 
 
 def embed_text(client, text: str, model_id: str) -> np.ndarray:
-    response = client.invoke_model(
-        modelId=model_id,
-        body=json.dumps({"inputText": text, "dimensions": EMBED_DIM, "normalize": True}),
-    )
+    try:
+        response = client.invoke_model(
+            modelId=model_id,
+            body=json.dumps({"inputText": text, "dimensions": EMBED_DIM, "normalize": True}),
+        )
+    except ClientError as e:
+        if e.response.get("Error", {}).get("Code") == "AccessDeniedException":
+            print(BEDROCK_FTU_HINT, file=sys.stderr)
+            sys.exit(1)
+        raise
     payload = json.loads(response["body"].read())
     return np.asarray(payload["embedding"], dtype=np.float32)
 
