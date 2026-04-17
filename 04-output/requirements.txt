@@ -1,0 +1,2 @@
+boto3>=1.35.0
+jsonschema>=4.21.0
