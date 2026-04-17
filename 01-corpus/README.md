@@ -66,16 +66,12 @@ If your organization has no ADRs, `generate_adr_from_diff.py` is where to start.
 
 ## Further reading
 
-**ADRs as a format**
-- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — Michael Nygard, the original essay that defined the format used here
+- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (Michael Nygard, 2011) — the original ADR essay defining the format used throughout this repo
 - [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) — comprehensive list of ADR templates, tools, and write-ups
-- [ADR on the ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records) — why ADRs landed in Adopt
-
-**Practitioner perspectives (outcomeops.ai)**
-- [What is an ADR and why they're critical for AI-powered development](https://www.outcomeops.ai/blogs/what-is-an-adr-and-why-theyre-critical-for-ai-powered-development)
-- [AI-generated ADRs: from zero documentation to queryable architecture](https://www.outcomeops.ai/blogs/ai-generated-adrs-from-zero-documentation-to-queryable-architecture)
-- [How 3 ADRs changed everything: Spring PetClinic proof](https://www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof)
-- [Making legacy SAP codebases queryable: ADR generation from ABAP](https://www.outcomeops.ai/blogs/making-legacy-sap-codebases-queryable-adr-generation-from-abap)
-- [OutcomeOps: self-documenting architecture — when code becomes queryable](https://www.outcomeops.ai/blogs/outcomeops-self-documenting-architecture-when-code-becomes-queryable)
+- [What is an ADR and why they're critical for AI-powered development](https://www.outcomeops.ai/blogs/what-is-an-adr-and-why-theyre-critical-for-ai-powered-development) (OutcomeOps) — the AI angle specifically
+- [AI-generated ADRs: from zero documentation to queryable architecture](https://www.outcomeops.ai/blogs/ai-generated-adrs-from-zero-documentation-to-queryable-architecture) (OutcomeOps) — the pattern `generate_adr_from_diff.py` implements
+- [How 3 ADRs changed everything: Spring PetClinic proof](https://www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof) (OutcomeOps) — narrative for the sample corpus in this folder
+- [Making legacy SAP codebases queryable: ADR generation from ABAP](https://www.outcomeops.ai/blogs/making-legacy-sap-codebases-queryable-adr-generation-from-abap) (OutcomeOps) — the same pattern on legacy code
+- [OutcomeOps: self-documenting architecture — when code becomes queryable](https://www.outcomeops.ai/blogs/outcomeops-self-documenting-architecture-when-code-becomes-queryable) (OutcomeOps) — how the corpus compounds over time
 
 Next: [`../02-retrieval/`](../02-retrieval/) — turning this corpus into something the model can query.

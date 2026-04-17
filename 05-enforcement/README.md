@@ -81,14 +81,11 @@ Layer 1 is documentation. Layers 2 and 3 are enforcement.
 
 ## Further reading
 
-**LLM-as-judge and evaluation**
-- [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685) — Zheng et al., 2023; the foundational paper on using LLMs as evaluators and the biases to watch for
-- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic's take on curating what agents see (applies equally to judges)
-
-**Practitioner perspectives (outcomeops.ai)**
-- [Your pull request is the guardrail](https://www.outcomeops.ai/blogs/your-pull-request-is-the-guardrail)
-- [Engineers who own the outcome](https://www.outcomeops.ai/blogs/engineers-who-own-the-outcome)
-- [From fixing code to teaching systems](https://www.outcomeops.ai/blogs/from-fixing-code-to-teaching-systems)
-- [The OutcomeOps way: stop prompting, start co-engineering](https://www.outcomeops.ai/blogs/the-outcomeops-way-stop-prompting-start-co-engineering)
+- [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685) (Zheng et al., 2023) — foundational LLM-as-judge paper and the biases to watch for
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (Anthropic, Sep 2025) — applies equally to what the judge sees
+- [Your pull request is the guardrail](https://www.outcomeops.ai/blogs/your-pull-request-is-the-guardrail) (OutcomeOps) — the thesis this folder implements
+- [Engineers who own the outcome](https://www.outcomeops.ai/blogs/engineers-who-own-the-outcome) (OutcomeOps) — why enforcement still needs a human in the loop
+- [From fixing code to teaching systems](https://www.outcomeops.ai/blogs/from-fixing-code-to-teaching-systems) (OutcomeOps) — what enforcement produces over time
+- [The OutcomeOps way: stop prompting, start co-engineering](https://www.outcomeops.ai/blogs/the-outcomeops-way-stop-prompting-start-co-engineering) (OutcomeOps) — why the enforcement loop matters
 
 Previous: [`../04-output/`](../04-output/) — the artifact being enforced.

@@ -64,59 +64,50 @@ This repo exists to show the pattern in code, end-to-end, so teams can build it 
 
 ---
 
+## Context engineering changes organizations, not just code
+
+The five-component model is the technical frame. Teams that actually deploy it consistently discover the harder shift is organizational. Roles, KPIs, and decision rights in a traditional software org were shaped by a world where AI could not read the corpus. Once it can, the middle layers of that structure start to look different — and the repo above is only useful in the first place because of those changes.
+
+- [The rise of the outcome engineer](https://www.outcomeops.ai/blogs/the-rise-of-the-outcome-engineer) — the emerging role
+- [Engineers who own the outcome](https://www.outcomeops.ai/blogs/engineers-who-own-the-outcome) — the operating model
+- [OutcomeOps and context engineering: the next corporate evolution beyond DevOps](https://www.outcomeops.ai/blogs/outcomeops-and-context-engineering-the-next-corporate-evolution-beyond-devops) — what comes after DevOps
+- [Death of the traditional product owner](https://www.outcomeops.ai/blogs/death-of-the-traditional-product-owner) — the product-side role shift
+- [Measuring what actually matters](https://www.outcomeops.ai/blogs/measurng-what-actually-matters) — the KPI shift
+
+---
+
 ## Further reading
 
-### From the broader community
+Foundational articles, reference guides, and practitioner writeups on context engineering as a discipline:
 
-Foundational and high-signal sources on context engineering as a discipline:
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (Anthropic, Sep 2025) — curating and limiting what an agent sees
+- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) (LangChain, Jun 2025) — the article that made the term widely used
+- [Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents/) (LangChain, Jul 2025) — write/select/compress/isolate framing
+- [Context Engineering: Bringing Engineering Discipline to Prompts](https://addyo.substack.com/p/context-engineering-bringing-engineering) (Addy Osmani, Jul 2025) — engineering-discipline framing
+- [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide) (PromptingGuide.ai) — reference entry
+- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (Michael Nygard, 2011) — the original ADR essay; the format used throughout this repo
+- [OutcomeOps and context engineering: the next corporate evolution beyond DevOps](https://www.outcomeops.ai/blogs/outcomeops-and-context-engineering-the-next-corporate-evolution-beyond-devops) (OutcomeOps) — the organizational thesis behind this repo
+- [OutcomeOps: self-documenting architecture — when code becomes queryable](https://www.outcomeops.ai/blogs/outcomeops-self-documenting-architecture-when-code-becomes-queryable) (OutcomeOps) — how ADR corpora compound as code evolves
+- [The real cost of knowledge: why most AI engineering platforms over-engineer RAG](https://www.outcomeops.ai/blogs/the-real-cost-of-knowledge-why-most-ai-engineering-platforms-over-engineer-rag) (OutcomeOps) — against premature retrieval infrastructure
+- [What AI-assisted development actually looks like in two years](https://www.outcomeops.ai/blogs/what-ai-assisted-development-actually-looks-like-in-two-years) (OutcomeOps) — the working developer's view
 
-- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic engineering, on curating and limiting what an agent sees
-- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) — LangChain, the article that gave the term widespread uptake
-- [Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents/) — LangChain, the write/select/compress/isolate framing
-- [Context Engineering: Bringing Engineering Discipline to Prompts](https://addyo.substack.com/p/context-engineering-bringing-engineering) — Addy Osmani
-- [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide) — PromptingGuide.ai reference
-- [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — Michael Nygard's original ADR essay (the format used throughout this repo)
-
-### Companion repositories
+## Companion repositories
 
 - [bonigarcia/context-engineering](https://github.com/bonigarcia/context-engineering) — book companion from Boni García; organized by chapter with polyglot examples
 - [davidkimai/Context-Engineering](https://github.com/davidkimai/Context-Engineering) — concepts, patterns, and techniques
 - [Meirtz/Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering) — curated list of papers, tools, and articles
 - [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) — the definitive ADR resource list
 
-### From outcomeops.ai
+## Deep dives by component
 
+Each folder's README has its own curated reading list; the quick index:
 
-
-**Corpus**
-- [What is an ADR and why they're critical for AI-powered development](https://www.outcomeops.ai/blogs/what-is-an-adr-and-why-theyre-critical-for-ai-powered-development)
-- [AI-generated ADRs: from zero documentation to queryable architecture](https://www.outcomeops.ai/blogs/ai-generated-adrs-from-zero-documentation-to-queryable-architecture)
-- [How 3 ADRs changed everything: Spring PetClinic proof](https://www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof)
-- [Making legacy SAP codebases queryable: ADR generation from ABAP](https://www.outcomeops.ai/blogs/making-legacy-sap-codebases-queryable-adr-generation-from-abap)
-
-**Retrieval**
-- [The real cost of knowledge: why most AI engineering platforms over-engineer RAG](https://www.outcomeops.ai/blogs/the-real-cost-of-knowledge-why-most-ai-engineering-platforms-over-engineer-rag)
-- [OutcomeOps: self-documenting architecture — when code becomes queryable](https://www.outcomeops.ai/blogs/outcomeops-self-documenting-architecture-when-code-becomes-queryable)
-
-**Injection**
-- [How I refactored a 1348-line Lambda using context engineering](https://www.outcomeops.ai/blogs/how-i-refactored-a-1348-line-lambda-using-context-engineering)
-- [Same context, three models — the floor isn't zero](https://www.outcomeops.ai/blogs/same-context-three-models-the-floor-isnt-zero)
-- [6.6M tokens, $4,800, zero visibility — so I built a dashboard](https://www.outcomeops.ai/blogs/6-6m-tokens-4800-zero-visibility-so-i-built-a-dashboard)
-
-**Output**
-- [The outcome is writing itself](https://www.outcomeops.ai/blogs/the-outcome-is-writing-itself)
-- [The OutcomeOps way: stop prompting, start co-engineering](https://www.outcomeops.ai/blogs/the-outcomeops-way-stop-prompting-start-co-engineering)
-
-**Enforcement**
-- [Your pull request is the guardrail](https://www.outcomeops.ai/blogs/your-pull-request-is-the-guardrail)
-- [Engineers who own the outcome](https://www.outcomeops.ai/blogs/engineers-who-own-the-outcome)
-- [From fixing code to teaching systems](https://www.outcomeops.ai/blogs/from-fixing-code-to-teaching-systems)
-
-**Comparisons & positioning**
-- [Context engineering vs Nova Forge](https://www.outcomeops.ai/blogs/context-engineering-vs-nova-forge)
-- [Anthropic says: build skills, not agents](https://www.outcomeops.ai/blogs/anthropic-says-build-skills-not-agents)
-- [You're probably using the wrong Bedrock model](https://www.outcomeops.ai/blogs/youre-probably-using-the-wrong-bedrock-model)
-- [OutcomeOps and context engineering: the next corporate evolution beyond DevOps](https://www.outcomeops.ai/blogs/outcomeops-and-context-engineering-the-next-corporate-evolution-beyond-devops)
+- **Corpus** — see [`01-corpus/`](./01-corpus#further-reading) — ADR formats, corpus bootstrapping, self-documenting architecture
+- **Retrieval** — see [`02-retrieval/`](./02-retrieval#further-reading) — FAISS, "Lost in the Middle," retrieval economics
+- **Injection** — see [`03-injection/`](./03-injection#further-reading) — prompt structure, token budgets, inference cost
+- **Output** — see [`04-output/`](./04-output#further-reading) — JSON Schema, Bedrock tool-use, the outcome engineer
+- **Enforcement** — see [`05-enforcement/`](./05-enforcement#further-reading) — LLM-as-judge research, PR-as-guardrail
+- **Comparisons** — see [`comparisons/`](./comparisons#further-reading) — CE vs RAG vs agents vs enterprise search
 
 ---
 

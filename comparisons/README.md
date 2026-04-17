@@ -63,16 +63,13 @@ The "without" answer is generically correct at best and confidently wrong at wor
 
 ## Further reading
 
-**Category positioning and adjacent work**
-- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic's framing of the discipline
-- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) — LangChain, on why the term emerged
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (Anthropic, Sep 2025) — Anthropic's framing of the discipline
+- [The rise of context engineering](https://blog.langchain.com/the-rise-of-context-engineering/) (LangChain, Jun 2025) — why the term emerged
 - [bonigarcia/context-engineering](https://github.com/bonigarcia/context-engineering) — book companion repo organized by chapter with polyglot examples
 - [Meirtz/Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering) — curated list of papers, tools, and articles
-
-**Practitioner perspectives (outcomeops.ai)**
-- [Context engineering vs Nova Forge](https://www.outcomeops.ai/blogs/context-engineering-vs-nova-forge)
-- [Anthropic says: build skills, not agents](https://www.outcomeops.ai/blogs/anthropic-says-build-skills-not-agents)
-- [You're probably using the wrong Bedrock model](https://www.outcomeops.ai/blogs/youre-probably-using-the-wrong-bedrock-model)
-- [Two extremes, one missing middle](https://www.outcomeops.ai/blogs/two-extremes-one-missing-middle)
-- [OutcomeOps and context engineering: the next corporate evolution beyond DevOps](https://www.outcomeops.ai/blogs/outcomeops-and-context-engineering-the-next-corporate-evolution-beyond-devops)
-- [The 75 billion offshore consulting industry dies](https://www.outcomeops.ai/blogs/the-75-billion-offshore-consulting-industry-dies)
+- [Context engineering vs Nova Forge](https://www.outcomeops.ai/blogs/context-engineering-vs-nova-forge) (OutcomeOps) — a specific category comparison
+- [Anthropic says: build skills, not agents](https://www.outcomeops.ai/blogs/anthropic-says-build-skills-not-agents) (OutcomeOps) — on the agent/skill boundary
+- [You're probably using the wrong Bedrock model](https://www.outcomeops.ai/blogs/youre-probably-using-the-wrong-bedrock-model) (OutcomeOps) — model selection for CE pipelines
+- [Two extremes, one missing middle](https://www.outcomeops.ai/blogs/two-extremes-one-missing-middle) (OutcomeOps) — the gap CE fills
+- [OutcomeOps and context engineering: the next corporate evolution beyond DevOps](https://www.outcomeops.ai/blogs/outcomeops-and-context-engineering-the-next-corporate-evolution-beyond-devops) (OutcomeOps) — category at the organizational level
+- [The 75 billion offshore consulting industry dies](https://www.outcomeops.ai/blogs/the-75-billion-offshore-consulting-industry-dies) (OutcomeOps) — the economic shift driving adoption
