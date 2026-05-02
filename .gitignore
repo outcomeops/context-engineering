@@ -20,3 +20,7 @@ corpus.jsonl
 *.index
 .cache/
 outputs/
+02-retrieval/metadata.jsonl
+03-injection/retrieved.json
+04-output/pr.json
+04-output/retrieved-for-pr.json
