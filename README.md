@@ -26,6 +26,25 @@ A system with only components 1–3 is a RAG system. The output and enforcement 
 
 ---
 
+## Case studies
+
+Real-world deployments built on the same context-engineering pattern this repo implements. The repo files are engineer-facing; the canonical buyer-facing versions live on outcomeops.ai.
+
+- [**OutcomeOps AI Assist**](./case-studies/outcomeops-ai-assist.md) — workspace budgets, OCSF audit + SIEM export, and the integration-trio pattern that put OneDrive and OneNote in production on the same day. Canonical: [www.outcomeops.ai/case-studies/outcomeops-ai-assist](https://www.outcomeops.ai/case-studies/outcomeops-ai-assist).
+- [**RetrieveIT.ai**](./case-studies/retrieveit-ai.md) — multi-tenant semantic-search SaaS from domain registration to production in 6 days; multi-tenant isolation, encrypted OAuth, fail-closed billing — all pre-decided in the ADR library. Canonical: [www.outcomeops.ai/case-studies/retrieveit-ai](https://www.outcomeops.ai/case-studies/retrieveit-ai).
+- [**MyFantasy.ai**](./case-studies/myfantasy-ai.md) — AI-suggested / human-approved scoring pipeline at $0.031 per episode; the trust boundary is the architecture. 60 Lambdas in 22 days against RuPaul's Drag Race All Stars. Canonical: [www.outcomeops.ai/case-studies/myfantasy-ai](https://www.outcomeops.ai/case-studies/myfantasy-ai).
+- More case studies: [www.outcomeops.ai/case-studies](https://www.outcomeops.ai/case-studies)
+
+---
+
+## Examples
+
+Short, reproducible demonstrations of context engineering in practice.
+
+- [**Three ADRs rewrote the generated code**](./examples/three-adrs-spring-petclinic.md) — the smoking-gun A/B test on Spring PetClinic. Same model, same prompt, same codebase; three markdown files change the output architecture. Two public Git branches you can diff yourself. Canonical: [www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof](https://www.outcomeops.ai/blogs/how-3-adrs-changed-everything-spring-petclinic-proof).
+
+---
+
 ## Running the examples
 
 All examples use **Amazon Bedrock** with Claude. Each folder has its own `requirements.txt` and `README.md` with a runnable command.
