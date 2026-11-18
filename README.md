@@ -4,6 +4,8 @@ A working reference implementation of **context engineering** — the discipline
 
 This repo is the code companion to [**What Is Context Engineering?**](https://www.outcomeops.ai/context-engineering) on outcomeops.ai. The glossary defines the concepts; this repo shows them running end-to-end against a real corpus on Amazon Bedrock.
 
+For the full production platform built on this pattern (PR review against your ADRs, an organizational knowledge base, code maps, an MCP server, and ticket-to-PR code generation), see [**OutcomeOps**](https://github.com/bcarpio/outcome-ops-ai-assist), open source under the Apache 2.0 license.
+
 > Context engineering treats context as a first-class engineering artifact — version-controlled, retrievable, and enforceable — rather than as prompts typed into a chat window.
 
 ---
@@ -32,7 +34,6 @@ Real-world deployments built on the same context-engineering pattern this repo i
 
 - [**OutcomeOps AI Assist**](./case-studies/outcomeops-ai-assist.md) — workspace budgets, OCSF audit + SIEM export, and the integration-trio pattern that put OneDrive and OneNote in production on the same day. Canonical: [www.outcomeops.ai/case-studies/outcomeops-ai-assist](https://www.outcomeops.ai/case-studies/outcomeops-ai-assist).
 - [**RetrieveIT.ai**](./case-studies/retrieveit-ai.md) — multi-tenant semantic-search SaaS from domain registration to production in 6 days; multi-tenant isolation, encrypted OAuth, fail-closed billing — all pre-decided in the ADR library. Canonical: [www.outcomeops.ai/case-studies/retrieveit-ai](https://www.outcomeops.ai/case-studies/retrieveit-ai).
-- [**MyFantasy.ai**](./case-studies/myfantasy-ai.md) — AI-suggested / human-approved scoring pipeline at $0.031 per episode; the trust boundary is the architecture. 60 Lambdas in 22 days against RuPaul's Drag Race All Stars. Canonical: [www.outcomeops.ai/case-studies/myfantasy-ai](https://www.outcomeops.ai/case-studies/myfantasy-ai).
 - More case studies: [www.outcomeops.ai/case-studies](https://www.outcomeops.ai/case-studies)
 
 ---

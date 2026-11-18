@@ -84,7 +84,7 @@ The model was never asked to invent infrastructure patterns. It was asked to exe
 
 ## The methodology, in one paragraph
 
-Six days for a production multi-tenant SaaS isn't a stunt — it's the natural cadence when nothing on the critical path is a research question. The corpus had the answers; the AI looked them up. That's context engineering applied to product development itself: the same five-component pattern this repo documents, used to ship the company *and* the product. The pattern library compounded across RetrieveIT.ai, [OutcomeOps AI Assist](./outcomeops-ai-assist.md), and [MyFantasy.ai](./myfantasy-ai.md) — three products, one library, declining marginal cost per feature.
+Six days for a production multi-tenant SaaS isn't a stunt — it's the natural cadence when nothing on the critical path is a research question. The corpus had the answers; the AI looked them up. That's context engineering applied to product development itself: the same five-component pattern this repo documents, used to ship the company *and* the product. The pattern library compounded across RetrieveIT.ai, [OutcomeOps AI Assist](./outcomeops-ai-assist.md), and earlier products: one library, declining marginal cost per feature.
 
 ---
 
